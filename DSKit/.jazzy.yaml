@@ -1,0 +1,14 @@
+min_acl: public
+hide_documentation_coverage: false
+theme: fullwidth
+output: ./docs
+documentation: ./*.md
+swift_build_tool: xcodebuild
+module: DSKit
+xcodebuild_arguments:
+  - -scheme
+  - DSKit
+  - -sdk
+  - iphonesimulator
+  - -destination
+  - 'platform=iOS Simulator,name=iPhone 13'
