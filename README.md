@@ -103,3 +103,7 @@ Our minimum set of functionality will require the following elements:
 
 ### 2.
 * Add high contrast colors for primaryA & primaryB
+
+### 3.
+* Add enum to load images from Asset catalog
+* Unit tests to confirm image load
