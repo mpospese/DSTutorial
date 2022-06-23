@@ -189,3 +189,8 @@ Our minimum set of functionality will require the following elements:
 ### 5.
 * Add Large/Medium/Small variants of Text/Label & Text/Paragraph
 * Unit tests
+
+### 6.
+* Adjust DSButton & DSTextField to update insets
+* Add Large/Medium/Small variants of Button & Input
+* Unit tests

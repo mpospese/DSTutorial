@@ -16,7 +16,6 @@ public class DSButton: TypographyButton {
     public required init(typography: Typography) {
         super.init(typography: typography)
         maximumScaleFactor = 2
-        contentEdgeInsets = UIEdgeInsets(topAndBottom: 14, leftAndRight: Spacing.medium)
     }
 
     required init?(coder: NSCoder) { nil }
@@ -50,5 +49,14 @@ public class DSButton: TypographyButton {
         }
 
         setTitleColor(isEnabled ? .contentPrimary : .contentStateDisabled, for: state)
+    }
+
+    override open func adjustBreakpoint() {
+        super.adjustBreakpoint()
+        contentEdgeInsets = calculateInsets()
+    }
+
+    open func calculateInsets() -> UIEdgeInsets {
+        UIEdgeInsets(topAndBottom: 14, leftAndRight: Spacing.medium)
     }
 }

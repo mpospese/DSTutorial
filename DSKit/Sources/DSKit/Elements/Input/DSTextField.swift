@@ -49,6 +49,15 @@ public class DSTextField: TypographyTextField {
         backgroundColor = isEnabled ? .backgroundTertiary : .backgroundStateDisabled
         layer.borderColor = isEnabled ? UIColor.borderSelected.cgColor : nil
     }
+
+    override open func adjustBreakpoint() {
+        super.adjustBreakpoint()
+        textInsets = calculateInsets()
+    }
+
+    open func calculateInsets() -> UIEdgeInsets {
+        UIEdgeInsets(topAndBottom: Spacing.mediumSmall, leftAndRight: Spacing.medium)
+    }
 }
 
 private extension DSTextField {
@@ -66,8 +75,6 @@ private extension DSTextField {
             name: UITextField.textDidEndEditingNotification,
             object: self
         )
-
-        textInsets = UIEdgeInsets(topAndBottom: Spacing.mediumSmall, leftAndRight: Spacing.medium)
     }
 
     @objc
