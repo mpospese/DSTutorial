@@ -129,3 +129,8 @@ Our minimum set of functionality will require the following elements:
 ### 8.
 * Add Typography.Paragrap.Medium & Small
 * Unit tests
+
+### 9.
+* Add Heading Element
+* Expand XCTestCase subclass with helpers for comparing typography & color
+* Unit tests
