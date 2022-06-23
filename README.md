@@ -116,3 +116,8 @@ Our minimum set of functionality will require the following elements:
 * Add register/unregister fonts to DSKit
 * Unit tests
 * Register fonts in app
+
+### 6.
+* Add Typography.Heading
+* XCTestCase subclass to register/unregister fonts on setUp/tearDown
+* Unit tests
