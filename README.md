@@ -100,3 +100,6 @@ Our minimum set of functionality will require the following elements:
 * Define Colors
 * Unit test WCAG 2.0 contrast for more color pairings (test failure)
 * Use new DSKit framework colors in DSTutorial app
+
+### 2.
+* Add high contrast colors for primaryA & primaryB

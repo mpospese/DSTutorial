@@ -11,8 +11,31 @@ import YCoreUI
 // MARK: - Foundations
 
 extension UIColor {
-    static let primaryA = UIColor { $0.userInterfaceStyle == .dark ? .gray200: .black }
-    static let primaryB = UIColor { $0.userInterfaceStyle == .dark ? .gray900: .white }
+    static let primaryA = UIColor {
+        let color: UIColor
+        switch ($0.userInterfaceStyle, $0.accessibilityContrast) {
+        case (.dark, .high):
+            color = .white // lighter than gray200
+        case (.dark, _):
+            color = .gray200
+        default:
+            color = .black
+        }
+        return color
+    }
+
+    static let primaryB = UIColor {
+        let color: UIColor
+        switch ($0.userInterfaceStyle, $0.accessibilityContrast) {
+        case (.dark, .high):
+            color = .black // darker than gray900
+        case (.dark, _):
+            color = .gray900
+        default:
+            color = .white
+        }
+        return color
+    }
 }
 
 // MARK: - Core
