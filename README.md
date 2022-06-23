@@ -134,3 +134,7 @@ Our minimum set of functionality will require the following elements:
 * Add Heading Element
 * Expand XCTestCase subclass with helpers for comparing typography & color
 * Unit tests
+
+### 10.
+* Add Label Element
+* Unit tests
