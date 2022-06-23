@@ -107,3 +107,7 @@ Our minimum set of functionality will require the following elements:
 ### 3.
 * Add enum to load images from Asset catalog
 * Unit tests to confirm image load
+
+### 4.
+* Add Spacing
+* Unit tests
