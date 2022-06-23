@@ -56,6 +56,17 @@ final class BreakpointTests: XCTestCase {
             // Given simulator is iPad, it should not be large
             XCTAssertNotEqual(current, .large)
         }
+
+        UIApplicationStub.shared = UIApplicationMock(frame: CGRect.iPhone12)
+        XCTAssertEqual(Breakpoint.current(), .small)
+
+        UIApplicationStub.shared = UIApplicationMock(frame: CGRect.iPadLandscape)
+        XCTAssertEqual(Breakpoint.current(), .medium)
+
+        UIApplicationStub.shared =  UIApplicationMock(frame: CGRect.monitor6K)
+        XCTAssertEqual(Breakpoint.current(), .large)
+
+        UIApplicationStub.shared = UIApplication.shared
     }
 }
 
@@ -113,4 +124,41 @@ extension CGRect {
 
     /// 6K monitor
     static let monitor6K = CGRect(x: 0, y: 0, width: 6144, height: 3160) // 6K
+}
+
+struct UIApplicationMock: SceneVendor {
+    let scenes: [AnyObject]
+
+    // creates one "scene" that has one "window" of the specified dimensions
+    init(frame: CGRect) {
+        let scene = UIWindowSceneMock(frame: frame)
+        self.scenes = [scene]
+    }
+}
+
+class UIWindowSceneMock: WindowVendor {
+    let windows: [UIWindow]
+
+    // creates one "window" of the specified dimensions
+    init(frame: CGRect) {
+        let window = UIWindow(frame: frame)
+        window.makeKey()
+        self.windows = [window]
+    }
+}
+
+extension Breakpoint {
+    // gets a mock for a screen size that will match the spectified breakpoint
+    var mock: UIApplicationMock {
+        let rect: CGRect
+        switch self {
+        case .small:
+            rect = .iPhone12
+        case .medium:
+            rect = .iPadLandscape
+        case .large:
+            rect = .monitor6K
+        }
+        return UIApplicationMock(frame: rect)
+    }
 }

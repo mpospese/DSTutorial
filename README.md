@@ -181,3 +181,7 @@ Our minimum set of functionality will require the following elements:
 
 ### 3.
 * Add breakpoint support to Tyopgraphy.Label & Paragraph
+
+### 4. Advanced unit testing
+* Add stubs to be able to change current Breakpoint
+* Unit tests for Typography+Breakpoint
