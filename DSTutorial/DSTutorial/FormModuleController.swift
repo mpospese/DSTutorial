@@ -7,8 +7,11 @@
 
 import UIKit
 import DSKit
+import YCoreUI
 
-class FormModuleController: UIViewController {
+class FormModuleController: FormViewController {
+    let form = FormView()
+
     init() {
         super.init(nibName: nil, bundle: nil)
         title = "Form"
@@ -17,14 +20,14 @@ class FormModuleController: UIViewController {
 
     required init?(coder: NSCoder) { nil }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configureSubviews()
-    }
-}
+    override func configureSubviews() {
+        super.configureSubviews()
 
-private extension FormModuleController {
-    func configureSubviews() {
-        view.backgroundColor = .backgroundPrimary
+        scrollView.backgroundColor = .backgroundPrimary
+        contentView.addSubview(form)
+        form.constrainEdges()
+
+        // pin the button to the bottom
+        fitContentToScreen()
     }
 }
