@@ -9,13 +9,21 @@ import XCTest
 import YMatterType
 @testable import DSKit
 
+protocol BreakpointAdjustable {
+    func adjustBreakpoint()
+}
+
+extension TypographyLabel: BreakpointAdjustable { }
+extension TypographyTextField: BreakpointAdjustable { }
+extension TypographyButton: BreakpointAdjustable { }
+
 class BreakPointElementTestCase: NotoSansFontTestCase {
     override func tearDownWithError() throws {
         try super.tearDownWithError()
         UIApplicationStub.shared = UIApplication.shared
     }
 
-    func adjust(_ element: TypographyLabel, to size: Breakpoint) {
+    func adjust<T: BreakpointAdjustable>(_ element: T, to size: Breakpoint) {
         UIApplicationStub.shared = size.mock
         element.adjustBreakpoint()
     }

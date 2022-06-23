@@ -199,3 +199,8 @@ Our minimum set of functionality will require the following elements:
 * Add size-adjusting Breakpoint subclasses of DSLabel & DSParagraph
 * Add XCTestCase subclass for adjusting breakpoints on UI elements
 * Unit tests
+
+### 8.
+* Add size-adjusting Breakpoint subclasses of DSButton & DSTextField
+* Update BreakpointElementTestCase to use generics
+* Unit tests
