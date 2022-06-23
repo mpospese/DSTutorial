@@ -146,3 +146,7 @@ Our minimum set of functionality will require the following elements:
 ### 12.
 * Add Button Element
 * Unit tests
+
+### 13.
+* Add CardView Component
+* Unit tests

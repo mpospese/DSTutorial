@@ -7,8 +7,13 @@
 
 import UIKit
 import DSKit
+import YCoreUI
 
 class CardComponentController: UIViewController {
+    let cardView: CardView = {
+        return CardView()
+    }()
+
     init() {
         super.init(nibName: nil, bundle: nil)
         title = "Card"
@@ -26,5 +31,9 @@ class CardComponentController: UIViewController {
 private extension CardComponentController {
     func configureSubviews() {
         view.backgroundColor = .backgroundPrimary
+        view.addSubview(cardView)
+        
+        cardView.constrainEdges(.top, to: view.safeAreaLayoutGuide)
+        cardView.constrainEdges(.horizontal)
     }
 }
