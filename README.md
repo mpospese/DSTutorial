@@ -178,3 +178,6 @@ Our minimum set of functionality will require the following elements:
 ### 2.
 * Add Foundation Breakpoint
 * Unit tests
+
+### 3.
+* Add breakpoint support to Tyopgraphy.Label & Paragraph
