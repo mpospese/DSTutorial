@@ -131,14 +131,18 @@ Our minimum set of functionality will require the following elements:
 * Unit tests
 
 ### 9.
-* Add Heading Element
+* Add Text/Heading Element
 * Expand XCTestCase subclass with helpers for comparing typography & color
 * Unit tests
 
 ### 10.
-* Add Label Element
+* Add Text/Label Element
 * Unit tests
 
 ### 11.
-* Add Paragraph Element
+* Add Text/Paragraph Element
+* Unit tests
+
+### 12.
+* Add Button Element
 * Unit tests
