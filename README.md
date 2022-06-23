@@ -148,9 +148,14 @@ Our minimum set of functionality will require the following elements:
 * Unit tests
 
 ### 13.
-* Add CardView Component
+* Assemble CardView Component
 * Unit tests
+* Add CardView to app
 
 ### 14.
 * Add Input Element
+* Unit tests
+
+### 15.
+* Assemble FormField Component
 * Unit tests
