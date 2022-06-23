@@ -138,3 +138,7 @@ Our minimum set of functionality will require the following elements:
 ### 10.
 * Add Label Element
 * Unit tests
+
+### 11.
+* Add Paragraph Element
+* Unit tests
