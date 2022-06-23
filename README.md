@@ -185,3 +185,7 @@ Our minimum set of functionality will require the following elements:
 ### 4. Advanced unit testing
 * Add stubs to be able to change current Breakpoint
 * Unit tests for Typography+Breakpoint
+
+### 5.
+* Add Large/Medium/Small variants of Text/Label & Text/Paragraph
+* Unit tests
