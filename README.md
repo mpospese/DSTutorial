@@ -111,3 +111,8 @@ Our minimum set of functionality will require the following elements:
 ### 4.
 * Add Spacing
 * Unit tests
+
+### 5.
+* Add register/unregister fonts to DSKit
+* Unit tests
+* Register fonts in app

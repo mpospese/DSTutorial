@@ -18,6 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
+        // register the fonts
+        try? NotoSansFontFamily.registerFonts()
+
         let window = UIWindow(windowScene: windowScene)
 
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.contentPrimary]
