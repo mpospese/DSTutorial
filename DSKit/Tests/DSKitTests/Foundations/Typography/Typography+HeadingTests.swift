@@ -12,7 +12,9 @@ import YMatterType
 final class TypographyHeadingTests: NotoSansFontTestCase {
     let types: [Typography] = [
         .Heading.small,
-        .Label.medium
+        .Label.medium,
+        .Paragraph.medium,
+        .Paragraph.small
     ]
 
     func testFont() {

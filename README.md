@@ -125,3 +125,7 @@ Our minimum set of functionality will require the following elements:
 ### 7.
 * Add Typography.Label.Medium
 * Unit tests
+
+### 8.
+* Add Typography.Paragrap.Medium & Small
+* Unit tests
