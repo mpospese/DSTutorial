@@ -194,3 +194,8 @@ Our minimum set of functionality will require the following elements:
 * Adjust DSButton & DSTextField to update insets
 * Add Large/Medium/Small variants of Button & Input
 * Unit tests
+
+### 7.
+* Add size-adjusting Breakpoint subclasses of DSLabel & DSParagraph
+* Add XCTestCase subclass for adjusting breakpoints on UI elements
+* Unit tests
