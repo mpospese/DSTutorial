@@ -127,7 +127,7 @@ Our minimum set of functionality will require the following elements:
 * Unit tests
 
 ### 8.
-* Add Typography.Paragrap.Medium & Small
+* Add Typography.Paragraph.Medium & Small
 * Unit tests
 
 ### 9.
@@ -164,3 +164,6 @@ Our minimum set of functionality will require the following elements:
 * Assemble FormView Module
 * Unit tests
 * Add FormView to app
+
+### 17.
+* Add increased contrast colors for backgroundTertiary / contentTertiary 
