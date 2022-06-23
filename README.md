@@ -121,3 +121,7 @@ Our minimum set of functionality will require the following elements:
 * Add Typography.Heading
 * XCTestCase subclass to register/unregister fonts on setUp/tearDown
 * Unit tests
+
+### 7.
+* Add Typography.Label.Medium
+* Unit tests
