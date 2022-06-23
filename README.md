@@ -167,3 +167,10 @@ Our minimum set of functionality will require the following elements:
 
 ### 17.
 * Add increased contrast colors for backgroundTertiary / contentTertiary 
+
+## Stretch - let's add Breakpoints!
+
+### 1.
+* Add Typography.Label.Large & Small
+* Add Typography.Paragraph.Large
+* Unit tests

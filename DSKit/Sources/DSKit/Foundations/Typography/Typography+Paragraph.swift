@@ -10,6 +10,15 @@ import YMatterType
 
 public extension Typography {
     struct Paragraph {
+        /// Paragraph / Large (18/28 pt, regular)
+        public static let large = Typography(
+            familyName: "NotoSans",
+            fontWeight: .regular,
+            fontSize: 18,
+            lineHeight: 28,
+            textStyle: .body
+        )
+
         /// Paragraph / Medium (16/24 pt, regular)
         public static let medium = Typography(
             familyName: "NotoSans",
