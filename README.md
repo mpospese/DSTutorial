@@ -84,7 +84,7 @@ Our minimum set of functionality will require the following elements:
             
 ## Steps
 
-###0.
+### 0.
 * Swift Package: DSKit
     * Depends on two open source frameworks (also Swift Packages)
         * YCoreUI: AutoLayout helpers, color contrast testing, scroll view assistance
@@ -95,3 +95,8 @@ Our minimum set of functionality will require the following elements:
     * Helper classes for unit tests
     * Unit tests for checking foreground / background color contrast
 * Empty app with tab bar and 2 empty view controllers: card & form, which will house Component III. A. CardView and Module IV. A. FormView
+
+### 1.
+* Define Colors
+* Unit test WCAG 2.0 contrast for more color pairings (test failure)
+* Use new DSKit framework colors in DSTutorial app

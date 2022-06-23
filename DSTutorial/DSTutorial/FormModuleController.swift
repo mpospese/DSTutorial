@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DSKit
 
 class FormModuleController: UIViewController {
     init() {
@@ -24,6 +25,6 @@ class FormModuleController: UIViewController {
 
 private extension FormModuleController {
     func configureSubviews() {
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .backgroundPrimary
     }
 }

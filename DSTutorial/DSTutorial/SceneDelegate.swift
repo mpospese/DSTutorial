@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DSKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -18,6 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
+
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.contentPrimary]
 
         window.rootViewController = MainViewController()
 

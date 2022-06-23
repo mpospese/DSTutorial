@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DSKit
 
 class CardComponentController: UIViewController {
     init() {
@@ -24,6 +25,6 @@ class CardComponentController: UIViewController {
 
 private extension CardComponentController {
     func configureSubviews() {
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .backgroundPrimary
     }
 }

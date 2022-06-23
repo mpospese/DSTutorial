@@ -11,27 +11,27 @@ import YCoreUI
 // MARK: - Foundations
 
 extension UIColor {
-    static let primaryA = UIColor.black
-    static let primaryB = UIColor.white
+    static let primaryA = UIColor { $0.userInterfaceStyle == .dark ? .gray200: .black }
+    static let primaryB = UIColor { $0.userInterfaceStyle == .dark ? .gray900: .white }
 }
 
 // MARK: - Core
 
 public extension UIColor {
-    static let backgroundPrimary = UIColor.white
-    static let backgroundTertiary = UIColor.gray100
+    static let backgroundPrimary = UIColor.primaryB
+    static let backgroundTertiary = UIColor { $0.userInterfaceStyle == .dark ? .gray700: .gray100 }
 
-    static let contentPrimary = UIColor.black
+    static let contentPrimary = UIColor.primaryA
     static let contentTertiary = UIColor.gray500
 
-    static let borderOpaque = UIColor.gray200
-    static let borderSelected = UIColor.black
+    static let borderOpaque = UIColor { $0.userInterfaceStyle == .dark ? .gray700: .gray200 }
+    static let borderSelected = UIColor.primaryA
 }
 
 // MARK: - Core Extensions
 
 public extension UIColor {
-    static let backgroundStateDisabled = UIColor.gray050
+    static let backgroundStateDisabled = UIColor { $0.userInterfaceStyle == .dark ? .gray800: .gray050 }
 
-    static let contentStateDisabled = UIColor.gray400
+    static let contentStateDisabled = UIColor { $0.userInterfaceStyle == .dark ? .gray600: .gray400 }
 }
