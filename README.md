@@ -174,3 +174,7 @@ Our minimum set of functionality will require the following elements:
 * Add Typography.Label.Large & Small
 * Add Typography.Paragraph.Large
 * Unit tests
+
+### 2.
+* Add Foundation Breakpoint
+* Unit tests
