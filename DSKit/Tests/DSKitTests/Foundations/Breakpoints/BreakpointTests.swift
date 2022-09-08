@@ -27,6 +27,7 @@ final class BreakpointTests: XCTestCase {
     }
 
     func testBreakpointForBounds() {
+        XCTAssertEqual(Breakpoint.breakpoint(for: CGRect.iPhone), .small)
         XCTAssertEqual(Breakpoint.breakpoint(for: CGRect.iPhoneSE1), .small)
         XCTAssertEqual(Breakpoint.breakpoint(for: CGRect.iPhone6S), .small)
         XCTAssertEqual(Breakpoint.breakpoint(for: CGRect.iPhoneX), .small)
@@ -34,6 +35,8 @@ final class BreakpointTests: XCTestCase {
         XCTAssertEqual(Breakpoint.breakpoint(for: CGRect.iPhone6SPlus), .small)
         XCTAssertEqual(Breakpoint.breakpoint(for: CGRect.iPhoneXS), .small)
         XCTAssertEqual(Breakpoint.breakpoint(for: CGRect.iPhone12ProMax), .small)
+        XCTAssertEqual(Breakpoint.breakpoint(for: CGRect.iPhone14Pro), .small)
+        XCTAssertEqual(Breakpoint.breakpoint(for: CGRect.iPhone14ProMax), .small)
 
         XCTAssertEqual(Breakpoint.breakpoint(for: CGRect.iPadPortrait), .medium)
         XCTAssertEqual(Breakpoint.breakpoint(for: CGRect.iPadLandscape), .medium)
@@ -73,6 +76,9 @@ final class BreakpointTests: XCTestCase {
 extension CGRect {
     // MARK: - iPhone screen dimensions
 
+    /// original iPhone
+    static let iPhone = CGRect(x: 0, y: 0, width: 320, height: 480)
+
     /// iPhone SE1, iPod Touch (7th gen)
     static let iPhoneSE1 = CGRect(x: 0, y: 0, width: 320, height: 568)
 
@@ -82,8 +88,11 @@ extension CGRect {
     /// iPhone X/XS/11Pro, 12/13 mini
     static let iPhoneX = CGRect(x: 0, y: 0, width: 375, height: 812)
 
-    /// iPhone 12/13
+    /// iPhone 12/13/14
     static let iPhone12 = CGRect(x: 0, y: 0, width: 390, height: 844)
+
+    /// iPhone 14 Pro
+    static let iPhone14Pro = CGRect(x: 0, y: 0, width: 393, height: 852)
 
     /// iPhone 6S/7/8 Plus
     static let iPhone6SPlus = CGRect(x: 0, y: 0, width: 414, height: 736)
@@ -91,8 +100,11 @@ extension CGRect {
     /// iPhone XS/11 Pro Max
     static let iPhoneXS = CGRect(x: 0, y: 0, width: 414, height: 896)
 
-    /// iPhone 12/13 Pro Max
+    /// iPhone 12/13 Pro Max/14 Plus
     static let iPhone12ProMax = CGRect(x: 0, y: 0, width: 428, height: 926)
+
+    /// iPhone 14 Pro Max
+    static let iPhone14ProMax = CGRect(x: 0, y: 0, width: 430, height: 932)
 
     // MARK: - iPad screen dimensions
 
